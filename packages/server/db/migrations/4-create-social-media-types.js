@@ -1,46 +1,31 @@
 'use strict';
-const moment = require('moment-timezone');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    console.log('');
-    console.log('------------------- SOCIAL MEDIA TYPES');
-    console.log('');
-    const socialMediaTypes = [
-      {
-        name: 'Facebook',
-        createdAt: moment().toDate(),
+    await queryInterface.createTable('SocialMediaTypes', {
+      id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+        allowNull: false,
       },
-      {
-        name: 'Instagram',
-        createdAt: moment().toDate(),
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
-      {
-        name: 'Twitter',
-        createdAt: moment().toDate(),
+      createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
       },
-      {
-        name: 'LinkedIn',
-        createdAt: moment().toDate(),
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
       },
-      {
-        name: 'Pinterest',
-        createdAt: moment().toDate(),
-      },
-      {
-        name: 'GooglePlus',
-        createdAt: moment().toDate(),
-      },
-    ];
-
-    await queryInterface.bulkInsert('SocialMediaTypes', socialMediaTypes);
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("SocialMediaTypes", null, {
-      truncate: true,
-      cascade: true,
-    });
+    await queryInterface.dropTable('SocialMediaTypes');
   },
 };
