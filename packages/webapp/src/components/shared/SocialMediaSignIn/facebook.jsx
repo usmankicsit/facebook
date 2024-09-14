@@ -31,18 +31,18 @@ const CONNECTED = "connected";
 const { FACEBOOK } = SOCIALMEDIA_META_DATA;
 
 const PERMISSIONS = [
-  "pages_show_list",
-  "pages_read_engagement",
-  "pages_manage_posts",
-  "public_profile",
-  "instagram_basic",
-  "pages_read_user_content",
-  "instagram_content_publish",
-  "read_insights",
-  "instagram_manage_insights",
-  "business_management",
-  "pages_manage_metadata",
-  "pages_manage_engagement",
+  // "pages_show_list",
+  // "pages_read_engagement",
+  // "pages_manage_posts",
+  // "public_profile",
+  // "instagram_basic",
+  // "pages_read_user_content",
+  // "instagram_content_publish",
+  // "read_insights",
+  // "instagram_manage_insights",
+  // "business_management",
+  // "pages_manage_metadata",
+  // "pages_manage_engagement",
 ];
 
 const Facebook = (props) => {
@@ -58,49 +58,49 @@ const Facebook = (props) => {
   const [loading, setLoading] = useState(false);
   const [isOnline, setIsOnline] = useState(false);
 
-  // useEffect(() => {
-  //   if (checkOnlineStatus) {
-  //     getFacebookProfileData(false, facebook);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (checkOnlineStatus) {
+      getFacebookProfileData(false, facebook);
+    }
+  }, []);
 
-  // const signInFacebook = () => {
-  //   if (!isOnline && !globalLoading) {
-  //     FB.login(
-  //       function (response) {
-  //         if (response.status === CONNECTED) {
-  //           getLongLivedAccessToken(
-  //             response?.authResponse.accessToken,
-  //             response?.authResponse.userID
-  //           );
-  //         } else {
-  //           loader(false);
-  //         }
-  //       },
-  //       {
-  //         scope: _.join(PERMISSIONS, ","),
-  //         return_scopes: true,
-  //       }
-  //     );
-  //   }
-  // };
+  const signInFacebook = () => {
+    if (!isOnline && !globalLoading) {
+      FB.login(
+        function (response) {
+          if (response.status === CONNECTED) {
+            getLongLivedAccessToken(
+              response?.authResponse.accessToken,
+              response?.authResponse.userID
+            );
+          } else {
+            loader(false);
+          }
+        },
+        {
+          scope: _.join(PERMISSIONS, ","),
+          return_scopes: true,
+        }
+      );
+    }
+  };
 
-  // const getLongLivedAccessToken = async (access_token, userId) => {
-  //   const params = {
-  //     grant_type: "fb_exchange_token",
-  //     client_id: FACEBOOK.APP_ID,
-  //     client_secret: FACEBOOK.APP_SECRET,
-  //     fb_exchange_token: access_token,
-  //   };
-  //   const response = await getLongLivedToken(params);
-  //   const meta = {
-  //     access_token: response?.access_token,
-  //     userId,
-  //   };
-  //   dispatch(setFacebookDetail(meta));
-  //   getFacebookProfileData(true, meta);
-  //   getSocialMediaPages(userId, response?.access_token);
-  // };
+  const getLongLivedAccessToken = async (access_token, userId) => {
+    const params = {
+      grant_type: "fb_exchange_token",
+      client_id: FACEBOOK.APP_ID,
+      client_secret: FACEBOOK.APP_SECRET,
+      fb_exchange_token: access_token,
+    };
+    const response = await getLongLivedToken(params);
+    const meta = {
+      access_token: response?.access_token,
+      userId,
+    };
+    dispatch(setFacebookDetail(meta));
+    getFacebookProfileData(true, meta);
+    getSocialMediaPages(userId, response?.access_token);
+  };
 
   const loader = (value = false) => {
     setLoading(value);
@@ -229,12 +229,12 @@ const Facebook = (props) => {
           {isOnline ? (
             <div className="flex gap-2 items-center">
               <Badge innerClass="bg-emerald-400" />
-              <span>online</span>
+              <span>Online</span>
             </div>
           ) : (
             <div className="flex gap-2 items-center">
               <Badge innerClass="bg-gray-300" />
-              <span>offline</span>
+              <span>Offline</span>
             </div>
           )}
         </div>
@@ -245,17 +245,17 @@ const Facebook = (props) => {
             loading={loading}
             onClick={signOutFacebook}
           >
-            logout
+            Logout
           </Button>
         ) : (
           <Button
             size="xs"
             variant="solid"
             loading={loading}
-            // onClick={signInFacebook}
+            onClick={signInFacebook}
             disabled={globalLoading}
           >
-            signin
+            Sign in
           </Button>
         )}
       </Card>

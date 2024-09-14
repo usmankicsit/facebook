@@ -3,7 +3,6 @@ import { useState } from "react";
 import Loader from "./loader";
 import Facebook from "./facebook";
 
-
 const SocialMediaSignIn = (props) => {
   const { checkOnlineStatus = true, className } = props;
   const [loading, setLoading] = useState(false);
@@ -24,7 +23,6 @@ const SocialMediaSignIn = (props) => {
           setGlobalLoading: setLoading,
         }}
       />
-     
     </div>
   );
 };

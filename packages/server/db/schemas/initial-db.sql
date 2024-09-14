@@ -87,13 +87,11 @@ CREATE TABLE "RolePermissions"
   "deletedAt" timestamptz
 );
 
-
 ALTER TABLE "Users" ADD CONSTRAINT "Users_fk0" FOREIGN KEY ("fkRoleId") REFERENCES "Roles" ("id");
 ALTER TABLE "Users" ADD CONSTRAINT "Users_fk1" FOREIGN KEY ("fkCreatedBy") REFERENCES "Users" ("id");
 ALTER TABLE "Users" ADD CONSTRAINT "Users_fk2" FOREIGN KEY ("fkUpdatedBy") REFERENCES "Users" ("id");
 
 ALTER TABLE "ForgotPasswords" ADD CONSTRAINT "ForgotPasswords_fk0" FOREIGN KEY ("fkUserId") REFERENCES "Users"("id");
-
 
 ALTER TABLE "SuperUsers" ADD FOREIGN KEY ("fkUserId") REFERENCES "Users" ("id");
 
@@ -104,4 +102,3 @@ ALTER TABLE "RolePermissions" ADD CONSTRAINT "RolePermissions_fk0" FOREIGN KEY (
 ALTER TABLE "RolePermissions" ADD CONSTRAINT "RolePermissions_fk1" FOREIGN KEY ("fkPermissionId") REFERENCES "Permissions" ("id");
 ALTER TABLE "RolePermissions" ADD CONSTRAINT "RolePermissions_fk2" FOREIGN KEY ("fkCreatedBy") REFERENCES "Users" ("id");
 ALTER TABLE "RolePermissions" ADD CONSTRAINT "RolePermissions_fk3" FOREIGN KEY ("fkUpdatedBy") REFERENCES "Users" ("id");
-
