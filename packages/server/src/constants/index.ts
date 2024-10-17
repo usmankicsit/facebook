@@ -9,7 +9,7 @@ export const MAX_FILE_SIZE = 25 * MB;
 
 export const FACEBOOK_API_PRIFIX = 'https://graph.facebook.com/v15.0';
 export const OPENAI_API_KEY =
-  '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';
+  'sk-EUVSHVRKRkwB9p7C5Hkn-TIz37SBuLQq9cCOBKmCCKT3BlbkFJICNpcusa0g_dmDJsHDSqhy8NqnpVT5npm4yp0YGHIA';
 
 export const PORT = process.env?.PORT;
 export const BASE_URL = process.env?.BASE_URL;
@@ -89,8 +89,6 @@ export const DATABASE_META = {
   client: process.env?.DB_CLIENT,
 };
 
-
-
 export const BREVO_API_KEY =
   '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';
 // export const BREVO_EMAIL_TEMPLATES = {
@@ -100,23 +98,24 @@ export const BREVO_API_KEY =
 // };
 
 export const CAMAS = {
-  URL:
-    'https://camasys.roadangel.sk/api/integration/getCurrentCarGroupsAvailability',
-  URL1:'https://camasys.roadangel.sk/api/integration/getCarGroupsPrices',
-  URL2:'https://camasys.roadangel.sk/api/integration/getCarGroupsBranchAvailability',
-  URL3:'https://camasys.roadangel.sk/api/integration/reserveCarGroup',
-  URL4:'https://camasys.roadangel.sk/api/integration/cancelReservation',
-  URL5:'https://camasys.roadangel.sk/api/contracts', 
-  URL6:'https://camasys.roadangel.sk/api/contracts/prepareCheckOutDocuments',
-  URL7:'https://camasys.roadangel.sk/document',
-  URL8:'https://camasys.roadangel.sk/api/contracts/prepareCheckInDocuments',
-  URL9:'https://camasys.roadangel.sk/api/contracts/uploadSignedDocument',
-  URL10:'https://camasys.roadangel.sk/api/contracts/deleteDocument',
-  URL11:'https://camasys.roadangel.sk/api/contracts/issueInvoice',
-  URL12:'https://acadsys.roadangel.sk/api/integration/externalInvoice/create',
-  TOKEN1:'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlAcm9hZGFuZ2VsLnNrIiwidXNlcklkIjoiNDkxMjgwMzMtZWRhNS0xMWVlLWE5YjgtOTYwMDAzMWJhZGJlIiwiY29tcGFueU5hbWUiOiJSb2FkYW5nZWwiLCJjb21wYW55SWQiOiI0OTE0ZmMyZS1lMTk2LTExZWUtODYwYS05NjAwMDMxYmFkYmUiLCJ2YXQiOjAsImZpcnN0TmFtZSI6IkFQSSIsImxhc3ROYW1lIjoiUk9BREFOR0VMIiwib3JnYW5pemF0aW9uYWxVbml0cyI6WyI0OTE1MjMzZi1lMTk2LTExZWUtODYwYS05NjAwMDMxYmFkYmUiXSwicm9sZSI6IlJPTEVfQVBJX1VTRVIifQ.i7hsftcYW0lsWJVD_1oL30Y2ogYxB5TOIT4nWF2rwVHs11whbZxQaRJno4VlmW0Gaf3LCzFk167GgkBa1zs6Vw',
+  URL: 'https://camasys.roadangel.sk/api/integration/getCurrentCarGroupsAvailability',
+  URL1: 'https://camasys.roadangel.sk/api/integration/getCarGroupsPrices',
+  URL2: 'https://camasys.roadangel.sk/api/integration/getCarGroupsBranchAvailability',
+  URL3: 'https://camasys.roadangel.sk/api/integration/reserveCarGroup',
+  URL4: 'https://camasys.roadangel.sk/api/integration/cancelReservation',
+  URL5: 'https://camasys.roadangel.sk/api/contracts',
+  URL6: 'https://camasys.roadangel.sk/api/contracts/prepareCheckOutDocuments',
+  URL7: 'https://camasys.roadangel.sk/document',
+  URL8: 'https://camasys.roadangel.sk/api/contracts/prepareCheckInDocuments',
+  URL9: 'https://camasys.roadangel.sk/api/contracts/uploadSignedDocument',
+  URL10: 'https://camasys.roadangel.sk/api/contracts/deleteDocument',
+  URL11: 'https://camasys.roadangel.sk/api/contracts/issueInvoice',
+  URL12: 'https://acadsys.roadangel.sk/api/integration/externalInvoice/create',
+  TOKEN1:
+    'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlAcm9hZGFuZ2VsLnNrIiwidXNlcklkIjoiNDkxMjgwMzMtZWRhNS0xMWVlLWE5YjgtOTYwMDAzMWJhZGJlIiwiY29tcGFueU5hbWUiOiJSb2FkYW5nZWwiLCJjb21wYW55SWQiOiI0OTE0ZmMyZS1lMTk2LTExZWUtODYwYS05NjAwMDMxYmFkYmUiLCJ2YXQiOjAsImZpcnN0TmFtZSI6IkFQSSIsImxhc3ROYW1lIjoiUk9BREFOR0VMIiwib3JnYW5pemF0aW9uYWxVbml0cyI6WyI0OTE1MjMzZi1lMTk2LTExZWUtODYwYS05NjAwMDMxYmFkYmUiXSwicm9sZSI6IlJPTEVfQVBJX1VTRVIifQ.i7hsftcYW0lsWJVD_1oL30Y2ogYxB5TOIT4nWF2rwVHs11whbZxQaRJno4VlmW0Gaf3LCzFk167GgkBa1zs6Vw',
   // 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlwYXlsZXNzQGN1YmFsYWIuZXUiLCJ1c2VySWQiOiJkMTBiMzJkZS1iMmE1LTExZTgtOWQ4Ni1mMjNjOTFkNTJmOGYiLCJjb21wYW55TmFtZSI6IkFWSVMiLCJjb21wYW55SWQiOiJlNWNhNzg0Mi0xMjk2LTQ4OTEtYjE0My04NDU1MjI0NTUzNGUiLCJ2YXQiOjAsImZpcnN0TmFtZSI6Ik9OTElORSIsImxhc3ROYW1lIjoiUEFZTEVTU19XRUIiLCJvcmdhbml6YXRpb25hbFVuaXRzIjpbImI2MzlmOWJkLTZkNjQtMTFlOC05YzM1LWYyM2M5MWQ1MmY4ZiIsIjczMDcyYjE4LWY5OWUtMTFlYS04YzliLWYyM2M5MWQ1MmY4ZiJdLCJyb2xlIjoiUk9MRV9BUElfVVNFUiJ9.pNc9htb9OHuzfcCr7YqP5gP--hu4o9w0rFE-9tHUJcbPakbyI6k2AZlrt7gOJBDBQmuup8Ds3A_vy5AcZeZDtA',
-  TOKEN2:'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlAcm9hZGFuZ2VsLnNrIiwiaWQiOiI2MWMzYjc1OC0yZjQ1LTExZWYtYTdhZC05NjAwMDMxYmFkYmUiLCJjb21wYW55SWQiOiI2MTI4MzAwMy0yZjQ0LTExZWYtYTdhZC05NjAwMDMxYmFkYmUiLCJmaXJzdE5hbWUiOiJBUEkiLCJsYXN0TmFtZSI6IlJEIiwicm9sZSI6IlJPTEVfQVBJIiwidmVyc2lvbiI6IjEuMy4xLVNOQVBTSE9UIiwiY2FuVXBsb2FkRG9jdW1lbnRzIjp0cnVlLCJsb2dpbkRldGFpbCI6IjYxYzM5MDQ3LTJmNDUtMTFlZi1hN2FkLTk2MDAwMzFiYWRiZSJ9.CxuRLtkdKnUKswx2FVhJncRSDJw055Z0AIuv3gzCytf4cNEqJanVtqj-rWaa5N_f9lE-iNk7tmMHBlR3PAeWrA',
+  TOKEN2:
+    'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlAcm9hZGFuZ2VsLnNrIiwiaWQiOiI2MWMzYjc1OC0yZjQ1LTExZWYtYTdhZC05NjAwMDMxYmFkYmUiLCJjb21wYW55SWQiOiI2MTI4MzAwMy0yZjQ0LTExZWYtYTdhZC05NjAwMDMxYmFkYmUiLCJmaXJzdE5hbWUiOiJBUEkiLCJsYXN0TmFtZSI6IlJEIiwicm9sZSI6IlJPTEVfQVBJIiwidmVyc2lvbiI6IjEuMy4xLVNOQVBTSE9UIiwiY2FuVXBsb2FkRG9jdW1lbnRzIjp0cnVlLCJsb2dpbkRldGFpbCI6IjYxYzM5MDQ3LTJmNDUtMTFlZi1hN2FkLTk2MDAwMzFiYWRiZSJ9.CxuRLtkdKnUKswx2FVhJncRSDJw055Z0AIuv3gzCytf4cNEqJanVtqj-rWaa5N_f9lE-iNk7tmMHBlR3PAeWrA',
   TOKEN:
     'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcGlAY3ViYWxhYi5ldSIsInVzZXJJZCI6IjEwYWQxNzc2LTYzMDctMTFlOC05NTRlLWYyM2M5MWQ1MmY4ZiIsImNvbXBhbnlOYW1lIjoiQVZJUyIsImNvbXBhbnlJZCI6ImU1Y2E3ODQyLTEyOTYtNDg5MS1iMTQzLTg0NTUyMjQ1NTM0ZSIsInZhdCI6MCwiZmlyc3ROYW1lIjoiT05MSU5FIiwibGFzdE5hbWUiOiJBVklTX1dFQiIsIm9yZ2FuaXphdGlvbmFsVW5pdHMiOlsiYzFiNzQ0ZTUtMDFlMi0xMWU4LTg1MzQtZjIzYzkxZDUyZjhmIiwiODIzODlmNjUtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiNjM5YTE4NjYtOGZjMi0xMWU3LTkwZWEtZjIzYzkxZDUyZjhmIiwiOTVjNGE1NGUtOTMxOC0xMWU3LTljYzctZjIzYzkxZDUyZjhmIiwiNjRjZTQwYjgtOGZjNC0xMWU3LTkwZWEtZjIzYzkxZDUyZjhmIiwiY2FhMTc1MWQtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiM2NlYjNhNzktNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiODI1ZTljYjktOGZjNC0xMWU3LTkwZWEtZjIzYzkxZDUyZjhmIiwiYzdiNTE1NTYtMDFiMi0xMWU4LTg1MzQtZjIzYzkxZDUyZjhmIiwiNTFkNWVkZDAtN2M2Yi0xMWU5LTgwMjMtZjIzYzkxZDUyZjhmIiwiMjFkYzMyMjUtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiZjI0NDE0OGUtN2VhZC0xMWU4LWJjYjEtZjIzYzkxZDUyZjhmIiwiOGE1MDgxMjItMDFkYS0xMWU4LTg1MzQtZjIzYzkxZDUyZjhmIiwiNTQ3MDBhOWYtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiZDlhYzUxNmUtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiOWZmMDU5OGEtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiOTVmNzZjMDMtN2Q4MC0xMWVlLWJiYzktOTYwMDAwZjZmM2JkIiwiMGVhYmVmMTMtNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiZjA5MTcwYjctMDFlMi0xMWU4LTg1MzQtZjIzYzkxZDUyZjhmIiwiYjUwZjliNWItNGY4YS0xMWU4LTliYzYtZjIzYzkxZDUyZjhmIiwiN2M2ZTlhZjQtMDFlMi0xMWU4LTg1MzQtZjIzYzkxZDUyZjhmIiwiYTdmMTllNjItYzkyNy00N2FlLWFjNjItZmUzNDQ5ZmMyOTVmIl0sInJvbGUiOiJST0xFX0FQSV9VU0VSIn0.u6IHiQWzNtnuxFKiBYoKbeVpHUjlBHaEwiP6rpojTWcq14vsvS0YJ33eU6C7tmt3VUNvDB4QZzD5J-rO_GEdIw',
 };

@@ -34,7 +34,7 @@ const PERMISSIONS = [
   // "pages_show_list",
   // "pages_read_engagement",
   // "pages_manage_posts",
-  // "public_profile",
+  "public_profile",
   // "instagram_basic",
   // "pages_read_user_content",
   // "instagram_content_publish",
@@ -48,10 +48,10 @@ const PERMISSIONS = [
 const Facebook = (props) => {
   const { checkOnlineStatus, useLoading } = props;
   const { globalLoading, setGlobalLoading, setMessage } = useLoading;
-  const dispatch = useDispatch();
   const { meta, socialmedia } = useSelector((state) => state);
   const { selectedCompany } = meta;
   const { facebook } = socialmedia;
+  const dispatch = useDispatch();
   const { t } = useTranslation();
 
   const [profile, setProfile] = useState(null);

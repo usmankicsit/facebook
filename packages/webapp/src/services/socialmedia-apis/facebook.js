@@ -64,3 +64,11 @@ export async function getPostEngagementCount(page_post_id, options = {}) {
   );
   return response.data;
 }
+
+export async function getPostAttachment(postId, options = {}) {
+  const params = new URLSearchParams(options);
+  return ApiService.fetchData({
+    url: `https://graph.facebook.com/v19.0/${postId}?${params}`,
+    method: "get",
+  });
+}
